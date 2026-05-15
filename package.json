@@ -4,7 +4,7 @@
   "type": "module",
   "sideEffects": false,
   "scripts": {
-    "dev": "tanstack-start dev",
+    "dev": "bunx tanstack-start dev",
     "build": "bunx tanstack-start build",
     "preview": "tanstack-start preview",
     "start": "node ./dist/server.js",
