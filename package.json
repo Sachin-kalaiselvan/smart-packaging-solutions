@@ -5,7 +5,7 @@
   "sideEffects": false,
   "scripts": {
     "dev": "tanstack-start dev",
-    "build": "tanstack-start build",
+    "build": "bunx tanstack-start build",
     "preview": "tanstack-start preview",
     "start": "node ./dist/server.js",
     "lint": "eslint .",
