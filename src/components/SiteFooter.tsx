@@ -44,8 +44,8 @@ export function SiteFooter() {
             <h4 className="text-sm font-semibold text-accent">Reach Us</h4>
             <ul className="mt-4 space-y-3 text-sm text-primary-foreground/80">
               <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-accent shrink-0" /># 01, SY No.56, Soladevanahalli Village, Kumbarahalli Main Road, Achit Nagar Post, Bengaluru — 560107</li>
-              <li className="flex gap-2"><Phone className="h-4 w-4 text-accent shrink-0" /> +91 99644 62999</li>
-              <li className="flex gap-2"><Mail className="h-4 w-4 text-accent shrink-0" /> smartpackagingsolutions26@gmail.com</li>
+              <li className="flex gap-2"><Phone className="h-4 w-4 text-accent shrink-0" /><a href="tel:+919964462999" className="hover:text-accent">+91 99644 62999</a></li>
+              <li className="flex gap-2"><Mail className="h-4 w-4 text-accent shrink-0" /><a href="mailto:smartpackagingsolutions26@gmail.com" className="break-all hover:text-accent">smartpackagingsolutions26@gmail.com</a></li>
             </ul>
           </div>
         </div>
