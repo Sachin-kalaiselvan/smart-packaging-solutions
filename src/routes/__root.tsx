@@ -68,11 +68,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Smart Packaging Solutions" },
       { property: "og:description", content: "Smart Packaging Solutions manufactures premium corrugated cartons, mono cartons & custom printed packaging from Bengaluru. Sustainable, fast, made-to-order." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/og-image.png" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Smart Packaging Solutions" },
       { name: "twitter:description", content: "Smart Packaging Solutions manufactures premium corrugated cartons, mono cartons & custom printed packaging from Bengaluru. Sustainable, fast, made-to-order." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ddd51586-9e9d-4ee5-a311-066b8e55ee92/id-preview-252af84e--450bfa1c-e4fc-47b2-b40d-315c5e1a919b.lovable.app-1778868042762.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ddd51586-9e9d-4ee5-a311-066b8e55ee92/id-preview-252af84e--450bfa1c-e4fc-47b2-b40d-315c5e1a919b.lovable.app-1778868042762.png" },
+      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
@@ -87,6 +87,8 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
