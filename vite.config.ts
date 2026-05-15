@@ -1,8 +1,4 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from "@tanstack/start/config";
 import tailwindcss from "tailwindcss";
-import tsConfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig({
-  plugins: [react(), tsConfigPaths()],
-});
+export default defineConfig();
