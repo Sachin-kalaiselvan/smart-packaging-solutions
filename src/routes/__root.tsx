@@ -62,17 +62,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Smart Packaging Solutions" },
+      { title: "Smart Packaging Solutions — Carton & Corrugated Boxes, Bengaluru" },
       { name: "description", content: "Smart Packaging Solutions manufactures premium corrugated cartons, mono cartons & custom printed packaging from Bengaluru. Sustainable, fast, made-to-order." },
       { name: "author", content: "Smart Packaging Solutions" },
       { property: "og:title", content: "Smart Packaging Solutions" },
-      { property: "og:description", content: "Smart Packaging Solutions manufactures premium corrugated cartons, mono cartons & custom printed packaging from Bengaluru. Sustainable, fast, made-to-order." },
+      { property: "og:description", content: "Premium corrugated cartons & custom packaging crafted in Bengaluru." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/og-image.png" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Smart Packaging Solutions" },
-      { name: "twitter:description", content: "Smart Packaging Solutions manufactures premium corrugated cartons, mono cartons & custom printed packaging from Bengaluru. Sustainable, fast, made-to-order." },
-      { name: "twitter:image", content: "/og-image.png" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
@@ -87,8 +83,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
