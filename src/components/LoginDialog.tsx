@@ -30,7 +30,7 @@ export function LoginDialog({ open, onOpenChange }: { open: boolean; onOpenChang
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                toast.success("Demo only — connect Lovable Cloud to enable real login.");
+                toast.success("Authentication system coming soon!");
                 onOpenChange(false);
               }}
               className="space-y-3"
@@ -53,7 +53,7 @@ export function LoginDialog({ open, onOpenChange }: { open: boolean; onOpenChang
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                toast.success("Demo only — connect Lovable Cloud to enable signup.");
+                toast.success("Sign-up will be enabled soon!");
                 onOpenChange(false);
               }}
               className="space-y-3"
