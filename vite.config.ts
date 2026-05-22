@@ -1,19 +1,7 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
-import cloudflare from "@cloudflare/vite-plugin";
-import tsConfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  plugins: [
-    cloudflare(),
-    tailwindcss(),
-    react({
-      jsxImportSource: "react",
-    }),
-    tsConfigPaths(),
-  ],
-  build: {
-    target: "ES2022",
+  tanstackStart: {
+    server: { entry: "server" },
   },
 });
