@@ -1,4 +1,3 @@
-import { PriceCalculator } from "@/components/PriceCalculator";
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Calculator, ArrowRight } from "lucide-react";
