@@ -3,6 +3,7 @@ import { Check, ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import { motion } from "motion/react";
+import { PriceCalculator } from "@/components/PriceCalculator";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -150,6 +151,22 @@ function PricingPage() {
         </div>
       </section>
 
+      {/* Price Calculator */}
+      <section className="py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">Estimate</span>
+            <h2 className="mt-3 font-display text-3xl font-bold text-primary">
+              Get an instant estimate
+            </h2>
+            <p className="mt-3 mb-8 text-muted-foreground">
+              Enter your box dimensions and quantity for a ballpark price. We'll send you an exact quote within 1 hour.
+            </p>
+            <PriceCalculator />
+          </Reveal>
+        </div>
+      </section>
+      
       {/* Product Price Table */}
       <section className="bg-secondary/40 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
