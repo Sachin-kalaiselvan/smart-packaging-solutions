@@ -90,6 +90,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "5b2f7115698a4f9a9ad1fbe6e565470e"}'></script>
       </body>
     </html>
   );
