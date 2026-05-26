@@ -8,3 +8,13 @@ export const router = createRouter({
   scrollRestoration: true,
   defaultPreloadStaleTime: 0,
 });
+
+export function getRouter() {
+  return router;
+}
+
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
