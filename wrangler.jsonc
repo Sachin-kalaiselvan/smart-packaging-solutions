@@ -1,7 +1,13 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tanstack-start-app",
-  "compatibility_date": "2025-09-24",
-  "compatibility_flags": ["nodejs_compat"],
-  "main": "src/server.ts"
+  "$schema": "https://json.schemastore.org/wrangler.json",
+  "name": "smart-packaging-solutions",
+  "type": "service",
+  "main": "dist/index.js",
+  "build": {
+    "command": "npm run build",
+    "cwd": "."
+  },
+  "site": {
+    "bucket": "./dist"
+  }
 }
