@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { DeliveryMap } from "@/components/DeliveryMap";
 import { Pencil, Hammer, Printer, Truck, Recycle, Headphones, Clock, CheckCircle2, ChevronDown, ChevronUp, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
