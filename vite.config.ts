@@ -16,14 +16,6 @@ export default defineConfig({
   build: {
     outDir: "../dist",
     emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'radix': [/@radix-ui/],
-          'vendor': ['react', 'react-dom'],
-        },
-      },
-    },
     chunkSizeWarningLimit: 1500,
   },
 });
