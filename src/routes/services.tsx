@@ -76,6 +76,15 @@ const timelineSteps = [
   },
 ];
 
+{/* DELIVERY MAP SECTION */}
+<section className="py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Reveal>
+      <DeliveryMap />
+    </Reveal>
+  </div>
+</section>
+
 const faqs = [
   {
     q: "What is the minimum order quantity (MOQ)?",
