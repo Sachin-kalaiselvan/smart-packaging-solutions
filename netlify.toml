@@ -7,7 +7,5 @@ functions = "dist/server"
 node_bundler = "esbuild"
 external_node_modules = ["leaflet"]
 
-[[redirects]]
-from = "/*"
-to = "/.netlify/functions/server"
-status = 200
+[build.cache]
+paths = ["node_modules/.cache"]
