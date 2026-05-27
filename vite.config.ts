@@ -5,7 +5,6 @@ import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  root: "src",
   plugins: [
     tanstackStart(),
     react(),
@@ -16,8 +15,6 @@ export default defineConfig({
     noExternal: ["leaflet"],
   },
   build: {
-    outDir: "../dist/client",
-    emptyOutDir: true,
     chunkSizeWarningLimit: 1500,
   },
 });
