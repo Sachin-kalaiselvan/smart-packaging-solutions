@@ -15,14 +15,6 @@ export default defineConfig({
     noExternal: ["leaflet"],
   },
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          radix: [/@radix-ui/],
-          vendor: ["react", "react-dom"],
-        },
-      },
-    },
     chunkSizeWarningLimit: 1500,
   },
 });
