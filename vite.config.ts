@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  root: "src",
   plugins: [
     react(),
     tailwindcss(),
@@ -13,6 +14,8 @@ export default defineConfig({
     noExternal: ["leaflet"],
   },
   build: {
+    outDir: "../dist",
+    emptyOutDir: true,
     rollupOptions: {
       output: {
         manualChunks: {
