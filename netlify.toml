@@ -9,3 +9,9 @@ external_node_modules = ["leaflet"]
 
 [build.cache]
 paths = ["node_modules/.cache"]
+
+# Route all requests to the server function
+[[redirects]]
+from = "/*"
+to = "/.netlify/functions/server"
+status = 200
