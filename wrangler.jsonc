@@ -1,13 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/wrangler.json",
   "name": "smart-packaging-solutions",
-  "type": "service",
-  "main": "dist/index.js",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2025-05-28",
+  "compatibility_flags": ["nodejs_compat"],
   "build": {
-    "command": "npm run build",
-    "cwd": "."
-  },
-  "site": {
-    "bucket": "./dist"
+    "command": "npm run build"
   }
 }
