@@ -1,7 +1,5 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-
-export default defineConfig({
-  tanstackStart: {
-    server: { entry: "server" },
-  },
-});
+{
+  "buildCommand": "bun install --frozen-lockfile && bun run build",
+  "installCommand": "bun install --frozen-lockfile",
+  "framework": "other"
+}
