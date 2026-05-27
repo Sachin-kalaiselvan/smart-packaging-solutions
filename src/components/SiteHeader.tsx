@@ -12,6 +12,8 @@ const nav = [
   { to: "/pricing", label: "Pricing" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
+  { to: "/portal", label: "Client Portal" },
+  { to: "/admin", label: "Admin" },
 ] as const;
 
 export function SiteHeader() {
