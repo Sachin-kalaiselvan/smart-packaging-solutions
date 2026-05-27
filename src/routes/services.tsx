@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { DeliveryMap } from "@/components/DeliveryMap";
 import { Pencil, Hammer, Printer, Truck, Recycle, Headphones, Clock, CheckCircle2, ChevronDown, ChevronUp, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
@@ -74,6 +75,15 @@ const timelineSteps = [
     color: "bg-primary/5 border-primary/20",
   },
 ];
+
+{/* DELIVERY MAP SECTION */}
+<section className="py-20">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Reveal>
+      <DeliveryMap />
+    </Reveal>
+  </div>
+</section>
 
 const faqs = [
   {
