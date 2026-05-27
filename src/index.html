@@ -1,12 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smart Packaging Solutions — Carton & Corrugated Boxes, Bengaluru</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./entry-client.tsx"></script>
-  </body>
-</html>
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import tsConfigPaths from "vite-tsconfig-paths";
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+    tsConfigPaths(),
+  ],
+  ssr: {
+    noExternal: ["leaflet"],
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'radix': [/@radix-ui/],
+          'vendor': ['react', 'react-dom'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1500,
+  },
+});
