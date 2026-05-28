@@ -1,8 +1,0 @@
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
-  "framework": "react",
-  "env": {
-    "VITE_API_URL": "@VITE_API_URL"
-  }
-}
