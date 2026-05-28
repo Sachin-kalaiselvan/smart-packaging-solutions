@@ -1,24 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, UserCircle2 } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 import { Button } from "@/components/ui/button";
-import { LoginDialog } from "@/components/LoginDialog";
 
 const nav = [
   { to: "/", label: "Home" },
   { to: "/products", label: "Products" },
   { to: "/services", label: "Services" },
-  { to: "/pricing", label: "Pricing" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
-  { to: "/portal", label: "Client Portal" },
-  { to: "/admin", label: "Admin" },
 ] as const;
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur-lg">
@@ -46,21 +41,11 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setLoginOpen(true)}
-            aria-label="Sign in"
-            className="rounded-full text-primary hover:bg-accent/10 hover:text-accent"
-          >
-            <UserCircle2 className="!h-7 !w-7" />
-          </Button>
-          <Button
-            onClick={() => setLoginOpen(true)}
-            className="hidden sm:inline-flex bg-gradient-brand text-accent-foreground shadow-soft hover:opacity-90"
-          >
-            Sign In
-          </Button>
+          <Link to="/contact" className="hidden sm:inline-flex">
+            <Button className="bg-gradient-brand text-accent-foreground shadow-soft hover:opacity-90">
+              Get a Quote
+            </Button>
+          </Link>
           <button
             className="md:hidden rounded-md p-2 text-foreground"
             onClick={() => setOpen(!open)}
@@ -84,11 +69,16 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="mt-2 rounded-md bg-gradient-brand px-3 py-2 text-center text-sm font-semibold text-accent-foreground"
+            >
+              Get a Quote
+            </Link>
           </div>
         </div>
       )}
-
-      <LoginDialog open={loginOpen} onOpenChange={setLoginOpen} />
     </header>
   );
 }

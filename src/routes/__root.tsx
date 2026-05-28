@@ -4,8 +4,6 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -13,7 +11,7 @@ import { ChatBot } from "@/components/ChatBot";
 import { SampleRequestForm } from "@/components/SampleRequestForm";
 import { Toaster } from "@/components/ui/sonner";
 
-import appCss from "../styles.css?url";
+import "../styles.css";
 
 function NotFoundComponent() {
   return (
@@ -83,53 +81,10 @@ function ErrorComponent({
 export const Route = createRootRouteWithContext<{
   queryClient: QueryClient;
 }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        title:
-          "Smart Packaging Solutions — Carton & Corrugated Boxes, Bengaluru",
-      },
-      {
-        name: "description",
-        content:
-          "Smart Packaging Solutions manufactures premium corrugated cartons, mono cartons & custom printed packaging from Bengaluru. Sustainable, fast, made-to-order.",
-      },
-      { name: "author", content: "Smart Packaging Solutions" },
-      { property: "og:title", content: "Smart Packaging Solutions" },
-      {
-        property: "og:description",
-        content:
-          "Premium corrugated cartons & custom packaging crafted in Bengaluru.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-    ],
-    links: [{ rel: "stylesheet", href: appCss }],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>{children}<Scripts /></body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
@@ -148,7 +103,6 @@ function RootComponent() {
         <SampleRequestForm />
         <Toaster richColors position="top-center" />
 
-        {/* WhatsApp Floating Button (FIXED) */}
         <a
           href="https://wa.me/919964462999?text=Hi%2C%20I%27m%20interested%20in%20your%20packaging%20solutions."
           target="_blank"
