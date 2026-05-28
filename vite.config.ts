@@ -16,5 +16,9 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 1500,
+    target: "esnext",
+  },
+  define: {
+    "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development"),
   },
 });
